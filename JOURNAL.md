@@ -39,14 +39,34 @@ I need 3 different PCBS total, all with a consistent shape and like screw positi
 I tried Figma but had issues with the PX to MM conversions, but I was able to get an oval layout in Inkscape.
 
 I originally tried this:\
-![Image of 01x13 Pin Header on Socket](Journal/images/Socket-1x13-layout.png)
+![Image of 01x13 Pin Header on Socket](Journal/Images/Socket-1x13-layout.png)
 
 Unfortunately, my 1x13 pin header footprint did not fit.
-![Image of a 01x13 Pin Header on Socket No Worky](Journal/Socket-1x13-layout-noworky.png)
+![Image of a 01x13 Pin Header on Socket No Worky](Journal/Images/Socket-1x13-layout-noworky.png)
 
 So, I switched to a 2x6 and a 1x1 header for each tube. I also decided to just hard wire it to save space.
-![Image of the Layout](Journal/Socket-2x6-1x1-layout.png),
+![Image of the Layout](Journal/Images/Socket-2x6-1x1-layout.png),
 I got it routed too :) (Yes the routing is horrible, but do better on a 2 layer PCB)
 
-![Fully Routed PCB](Journal/images/Socket-fully-routed.png)
-![3D Rendered Routed PCB](Journal/images/Socket-fully-routed-3D.png)
+![Fully Routed PCB](Journal/images/Images/Socket-fully-routed.png)
+![3D Rendered Routed PCB](Journal/Images/Socket-fully-routed-3D.png)
+
+# 25/05/2025
+Today I started working on the Low Voltage Electronics (Battery Management/Charging and the RP2040).
+
+The first step was copying across the board shape. To do this I just copied the sockets PCB file, and started removing stuff.
+![Low Voltage: Blank PCB Layout](Journal/Images/LowVoltage-BlankPCB.png)
+
+I started with the power circuitry, because that helps to layout the rest of the components.
+I think I may have to swapout the chosen LDO later, as I am unsure if 120mA will be enough current.
+
+I debated using a battery protection IC, but I eventually concluded it wasn't worth the additional complexity.
+I also chose a battery capacity of 200mA, using a 5k resistor on the battery charger.
+
+![BMS Schematic](Journal/Images/LowVoltage-BMS-Schematic.png)
+
+I then moved onto the RP2040 circuitry,
+I like making big and complex programs, so I went for the biggest flash I could :)
+
+![RP2040 Schematic](Journal/Images/LowVoltage-RP2040-Schematic.png)
+This does not have the IO for the High Voltage switching, as I am not sure what I want to use for it.
