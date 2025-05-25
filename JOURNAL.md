@@ -1,4 +1,4 @@
-mm# 21/05/2025
+# 21/05/2025
 ## Some basic goals:
 - 2 Nixie Tubes
 - Fully self contained
@@ -32,4 +32,21 @@ Physically, it's going to be stacked up in a few different layers, In order of t
 3. Low Voltage PCB (Battery Management, Charging, Micrcontroller
 4. Battery
 
+# 24/05/2025
+Today I started/continued designing the socket PCB. This is simple as it just holds the tubes in a way that can be disconnected.
 
+I need 3 different PCBS total, all with a consistent shape and like screw positioning, so I started designing a template.\
+I tried Figma but had issues with the PX to MM conversions, but I was able to get an oval layout in Inkscape.
+
+I originally tried this:\
+![Image of 01x13 Pin Header on Socket](Journal/images/Socket-1x13-layout.png)
+
+Unfortunately, my 1x13 pin header footprint did not fit.
+![Image of a 01x13 Pin Header on Socket No Worky](Journal/Socket-1x13-layout-noworky.png)
+
+So, I switched to a 2x6 and a 1x1 header for each tube. I also decided to just hard wire it to save space.
+![Image of the Layout](Journal/Socket-2x6-1x1-layout.png),
+I got it routed too :) (Yes the routing is horrible, but do better on a 2 layer PCB)
+
+![Fully Routed PCB](Journal/images/Socket-fully-routed.png)
+![3D Rendered Routed PCB](Journal/images/Socket-fully-routed-3D.png)
